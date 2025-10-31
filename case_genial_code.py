@@ -159,4 +159,14 @@ if __name__ == "__main__":
     risco_projetado_manual = risco_ponderado_projetado / total_projetado
     
     print(f"Risco Projetado (verificação): {risco_projetado_manual:.4f}")
-    print(f"Limite de Alerta (2.5 × 1.1): {2.5 * 1.1:.2f}")
+    print(f"Limite de Alerta (2.5 × 1.1): {(2.5 * 1.1):.2f}")
+
+    # Criação do arquivo JSON com o resultado
+    print("\n💾 SALVANDO RESULTADO EM ARQUIVO JSON...")
+    try:
+        with open('resultado_validacao.json', 'w', encoding='utf-8') as arquivo_json:
+            json.dump(resultado, arquivo_json, indent=2, ensure_ascii=False)
+        print("✅ Arquivo 'resultado_validacao.json' criado com sucesso!")
+        print(f"📁 Local: C:\\Users\\pedro\\Documents\\GitHub\\Case_Genial\\Case_Tech_Genial_PedroGabriel\\case_genial_code.py\\resultado_validacao.json")
+    except Exception as e:
+        print(f"❌ Erro ao criar arquivo JSON: {e}")
