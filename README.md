@@ -56,8 +56,4 @@ Considerações:
 - A escala de risco vai de 0 a 10.
 - O sistema é baseado na Resolução CVM 30.
 
-Próximos Passos Possíveis:
 
-- Integração com base de dados real.
-- Interface web para input de dados.
-- Geração de relatórios detalhados.
